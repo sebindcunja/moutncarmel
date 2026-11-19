@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mount Carmel Adult Day Program</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== Full testimonial list ===== */
+        .testimonial-full-list {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .testimonial-full-item {
+            scroll-margin-top: 140px;
+            /* keeps the anchored card visible below the fixed navbar */
+        }
+
+        .testimonial-full-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 40px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .testimonial-full-item:target .testimonial-full-card {
+            box-shadow: 0 0 0 3px var(--bs-primary, #b08d57), 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-full-card .testimonial-quote {
+            color: var(--bs-primary, #b08d57);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-full-card p {
+            color: #495057;
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .testimonial-full-card p:last-of-type {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>11935 Pine Valley Drive
+                    Woodbridge, ON
+                    L3l 0C1</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand d-flex align-items-center ms-4 ms-lg-0">
+
+                <img src="./img/emblem colour.jpg" alt="Carmel Logo" class="navbar-logo">
+
+                <div class="ms-3">
+                    <h5 class="school-name mb-0">
+                        Sisters of Our Lady
+                    </h5>
+                    <small class="school-subtitle">
+                        of Mount Carmel
+                    </small>
+                </div>
+
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="causes.html" class="nav-item nav-link">Activities</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="testimonial.html" class="nav-item nav-link active">Testimonial</a>
+                    <div class="nav-item dropdown">
+                        <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a> -->
+                        <div class="dropdown-menu m-0">
+                            <a href="causes.html" class="dropdown-item">Activities</a>
+                            <a href="donate.html" class="dropdown-item">Donate</a>
+                            <!-- <a href="team.html" class="dropdown-item">Our Team</a> -->
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <!-- <a href="404.html" class="dropdown-item">404 Page</a> -->
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
+                        Donate Now
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Testimonial</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Testimonial</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
+                <h1 class="display-6 mb-3">Trusted By Thousands Of People And Nonprofits</h1>
+                <p class="text-muted mb-0">Real stories from the families we've had the privilege of serving.</p>
+            </div>
+
+            <div class="testimonial-full-list">
+            <!-- Anna Ellero -->
+            <div class="testimonial-full-item" id="anna-ellero">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>If you are looking for a Catholic adult day program that is caring and nurturing, consider the Mount Carmel Adult Day Program. It serves as a welcoming community for seniors on a beautiful 2 acre property in Woodbridge. The seniors who attend are lovingly and gently cared for by both the Sisters of Mount Carmel and the many volunteers. My mind is at ease because I know my mom is able to socialize with people her age in a safe environment. The program offers may activities including daily exercises, art activities, singing, the mass, the rosary and most importantly the Eucharist. Meals and snacks are carefully prepared and enjoyed by all. The program is run both in English and Italian. I am truly grateful I found this program for my mom as it helps her to age gracefully surrounding by caring friends and staff.</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Anna Ellero</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mary Friedrich -->
+            <div class="testimonial-full-item" id="mary-friedrich">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>Thank you for providing our seniors with the best care possible. Mount Carmel Adult Program is such a life saver to caregivers taking care of their senior parent(s). Seniors have the pleasure of hearing mass, doing arts and crafts and play games.</p>
+
+                        <p>The meals and snacks provided are homemade. Every afternoon when I pick up my father he raves at how good lunch was. The home is clean, safe and I trust that my father is well taken care of.</p>
+
+                        <p>All of the sisters and volunteers truly care for the seniors.</p>
+
+                        <p>I trust my father in your care and I truly appreciate all that you do for him. Since he has been coming to Mount Carmel I have noticed a big change in his mood. He looks forward to coming and spending the day with all of wonderful sisters, staff and adult friends he has made at the centre.</p>
+
+                        <p>Thank you for everything you are doing for our seniors and know that having Mount Carmel Adult Program for is truly a blessing for the seniors in addition to the caregivers.</p>
+
+                        <p>With warm regards,<br>Mary Friedrich</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Mary Friedrich</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piera Graci -->
+            <div class="testimonial-full-item" id="piera-graci">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>From the bottom of my heart, I want to thank the Sisters of Mount Carmel Day Program for the extraordinary love, compassion, and dignity they gave my beloved mom during the three years she attended your program.</p>
+
+                        <p>Caring for someone with dementia is one of life&#x27;s greatest privileges, but also one of its greatest challenges. From the very first day, we knew Mom was in a place where she was genuinely loved and cherished. The warmth, kindness, and patience shown by every Sister and volunteer gave our family an incredible sense of peace.</p>
+
+                        <p>Your program was so much more than a safe place, it became a second home. Mom was surrounded by friendship, laughter, prayer, music, and delicious home-cooked meals. Every detail reflected love, compassion, and respect for each person in your care.</p>
+
+                        <p>One memory that will stay with me forever is how my mom would often hug the Sisters before leaving each day. Those heartfelt embraces spoke volumes about the love and trust she felt. It was clear she wasn&#x27;t simply attending a program, she had become part of a family.</p>
+
+                        <p>The respite your program gave our family was an immeasurable gift, allowing us to recharge while knowing Mom was safe, happy, and deeply cared for. That peace of mind is something we can never repay.</p>
+
+                        <p>Although my beloved mom has now passed, our hearts will always hold profound gratitude for the compassion, devotion, and humanity you showed her every single day. You brought joy, comfort, and dignity to the final years of her life, and for that, we will be forever grateful.</p>
+
+                        <p>With deepest gratitude,<br>Piera Graci</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Piera Graci</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grace Antognoni -->
+            <div class="testimonial-full-item" id="grace-antognoni">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>It is hard to express how grateful I am for the love and care my mother received at the Carmelite Sisters&#x27; Adult Day Program. Before she passed away, she attended two or three days each week, and those days brought her so much joy. She truly loved being there.</p>
+
+                        <p>The program offered far more than activities. It provided a community rooted in faith, kindness and compassion. Beginning each day with the Rosary and living out Catholic teachings gave my mom peace and purpose, and it was a great comfort to our family to know she was surrounded by people who shared her faith.</p>
+
+                        <p>She enjoyed the arts and crafts, outdoor walks when the weather allowed, and especially the wonderful homemade Italian meals and snacks. Every detail reflected the care that made the program feel like home.</p>
+
+                        <p>What touched us most were the wonderful volunteers and of course the Sisters. They welcomed my mother with warmth, patience, and genuine affection, always treating her with dignity and making her feel valued. Their kindness was a true reflection of Christ&#x27;s love in action.</p>
+
+                        <p>As her daughter, there was no greater gift than knowing she was safe, engaged, and happy in their care. The friendships she made and the joy she experienced enriched her day to day life. Our family will always be thankful to the Carmelite Sisters and everyone who makes this special ministry possible. Their faith, compassion, and dedication are a blessing to seniors and their families, and I wholeheartedly recommend this wonderful program to anyone seeking a loving, faith-filled environment for their loved one. It will always hold a special place in my heart.</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Grace Antognoni</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vickey Fusco -->
+            <div class="testimonial-full-item" id="vickey-fusco">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>I highly recommend the Adult Day program at Our Lady of Mount Carmel. Since joining, my mother has been truly engaged and socializing, enjoying everything from daily mass, to the delicious lunches provided. The volunteers are exceptionally supportive, and for a family navigating dementia, finding a program this nurturing has been an absolute blessing.</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Vickey Fusco</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gina Gigliozzi -->
+            <div class="testimonial-full-item" id="gina-gigliozzi">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>Our family will always be grateful for the love and care my mom received at the Our Sisters of Mount Carmel Adult Day Program. Living with dementia can be challenging, but for three years this program gave her a safe, welcoming, and engaging place where she truly looked forward to spending her days.</p>
+
+                        <p>She attended Monday through Friday, and every day was filled with meaningful social, recreational, and wellness activities that kept her active and connected. The Sisters of Mount Carmel and the dedicated volunteers treated her with incredible kindness, compassion, patience, and respect. They made every participant feel valued and cared for.</p>
+
+                        <p>The meals were another wonderful part of the program. Each day they served breakfast, a delicious homemade lunch, and an afternoon snack, all prepared with the same warmth and attention they showed in every aspect of their care.</p>
+
+                        <p>As a caregiver, knowing my mom was in such a loving and supportive environment gave our family tremendous peace of mind. This program enriched her life and made a meaningful difference in ours. We wholeheartedly recommend the Our Sisters of Mount Carmel Adult Day Program to any family looking for compassionate, high-quality care for a loved one.</p>
+
+                        <p>Gina Gigliozzi</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Gina Gigliozzi</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jordan Cacciotti -->
+            <div class="testimonial-full-item" id="jordan-cacciotti">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>My mum has attended this day program for years and everyone there has truly become her family. It is such an important part of her routine and her identity. Staff, volunteers and participants make her feel valued and appreciated. Activities are designed to meet her at her abilities, strengthen her talents and embrace her interests. When events like fundraisers, BBQs and celebrations are held, all the participants&#x27; families join in and connect with each other. Even if your loved one is in the early stages of their cognitive changes, they will still be challenged and embraced in this supportive environment. We are truly blessed to have the Mt Carmel Day Program in our lives and are forever grateful for all they do for my mum and our family!</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Jordan Cacciotti</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valerie -->
+            <div class="testimonial-full-item" id="valerie">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>Finding care for a parent with dementia is a journey of deep love, but it can also be exhausting. During the challenging times of COVID-19, the seniors daycare program run by the Sisters of Mount Carmel became our sanctuary. The moment I dropped my mom off, a profound sense of peace and calm would wash over me. I knew she was safe, happy, and genuinely looked after, which gave me the essential time to rest, reenergize, and return to her with a positive, happy spirit.</p>
+
+                        <p>The center itself is beautiful, surrounded by fresh air and peaceful farm fields. My mom absolutely loved being outdoors; that fresh air was truly therapeutic for her. The Sisters provided a wonderful, engaging routine filled with daily Mass, prayer times, arts and crafts, movement, gardening, and even cooking, alongside exceptional meals and snacks. Mount Carmel gave me priceless peace of mind and gave my mom a joyful, safe haven. I highly recommend that anyone needing support for a parent reach out to Sister Annie and visit this wonderful center.</p>
+
+                        <p>God Bless and love you,<br>Valerie</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Valerie</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Pizzuto Family -->
+            <div class="testimonial-full-item" id="pizzuto-family">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>Our parents have attended the Mt. Carmel Adult Daycare Program. Sister Annie has developed a highly skilled and motivated team with the greatest of compassion at its&#x27; core. The Mt. Carmel Daycare Program has provided care and compassion, and has been an invaluable help to our family. It has provided them with attentive care offering a wide range of well rounded social activities, supervised walks and homemade lunches. This has helped to maintain their independence so they can continue to age at home. Our family is grateful for the dedication and kindness shown to our parents. May God continue to Bless You in all your efforts for the care of others.</p>
+
+                        <p>The Pizzuto Family</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>The Pizzuto Family</h5>
+                            <span>Family Members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tina Zannona -->
+            <div class="testimonial-full-item" id="tina-zannona">
+                <div class="testimonial-full-card">
+                    <!-- <div class="testimonial-quote"><i class="fa fa-quote-left"></i></div> -->
+                    <div class="testimonial-stars mb-3">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                        <p>The adult day program with the Sisters at Our Lady of Mount Carmel has been a blessing for my loved one and for our entire family. Through their shared dedication, the Sisters and volunteers cultivate a meaningful sense of community. They have created a safe, loving, kind and compassionate environment that my loved one asks for. The friendships among the clients and amongst the families of the clients are evident at the community celebrations offered during the warmer months and during holidays.</p>
+
+                        <p>This faith based program gives my loved one the opportunity to participate in daily mass and receive Holy Communion. Prayer, music, time outdoors and crafting are interwoven into the day as well as providing home cooked meals and snacks.</p>
+
+                        <p>The Sisters who oversee and deliver this spiritual program have developed a friendship with my loved one and with myself as a caregiver. My family and I have peace of mind knowing our loved one is so well cared for, is participating in stimulating activities and enjoying her days amongst friends at Our Lady of Mount Carmel.</p>
+
+                        <p>Tina Zannona</p>
+                    <div class="testimonial-author mt-3">
+                        <div>
+                            <h5>Tina Zannona</h5>
+                            <span>Family Member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer text-light mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <div class="container py-5">
+
+            <div class="row g-5">
+
+                <!-- About -->
+                <div class="col-lg-4 col-md-6">
+
+                    <img src="img/emblem colour.jpg" alt="Mount Carmel Logo" width="75" class="mb-3">
+
+                    <h4 class="text-white mb-3">
+                        Mount Carmel Adult Day Program
+                    </h4>
+
+                    <p>
+                        Operated by the Congregation of Carmelite Sisters Institute of
+                        Our Lady of Carmel, providing compassionate care, engaging
+                        activities, and meaningful support for seniors in our community.
+                    </p>
+
+                    <div class="d-flex pt-3">
+
+                        <a class="btn btn-square me-2" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a class="btn btn-square me-2" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a class="btn btn-square me-2" href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a class="btn btn-square" href="#">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="text-white mb-4">
+                        Quick Links
+                    </h5>
+
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="program.html">Our Program</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h5 class="text-white mb-4">
+                        Contact Information
+                    </h5>
+
+                    <p>
+                        <i class="fa fa-map-marker-alt me-3 text-primary"></i>
+                        11935 Pine Valley Drive,<br>
+                        Woodbridge, ON L3L 0C1
+                    </p>
+
+                    <p>
+                        <i class="fa fa-phone-alt me-3 text-primary"></i>
+                        (905) XXX-XXXX
+                    </p>
+
+                    <p>
+                        <i class="fa fa-envelope me-3 text-primary"></i>
+                        info@mountcarmeladultday.ca
+                    </p>
+
+                </div>
+
+                <!-- Office Hours -->
+                <div class="col-lg-3 col-md-6">
+
+                    <h5 class="text-white mb-4">
+                        Office Hours
+                    </h5>
+
+                    <p>
+                        <strong>Monday - Friday</strong><br>
+                        8:30 AM – 4:30 PM
+                    </p>
+
+                    <p>
+                        Compassion • Dignity • Respect • Community
+                    </p>
+
+                    <a href="contact.html" class="btn btn-primary mt-2 px-4">
+                        Get In Touch
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+
+        <div class="container-fluid copyright">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6 text-center text-md-start">
+
+                        © 2026 <strong>Mount Carmel Adult Day Program</strong>.
+                        All Rights Reserved.
+
+                    </div>
+
+                    <div class="col-md-6 text-center text-md-end">
+
+                        Designed & Developed by
+                        <strong>SEBD Innovate</strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

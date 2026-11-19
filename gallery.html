@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery - Mount Carmel Adult Day Program</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== Gallery page styles ===== */
+
+        /* Masonry-style layout so photos keep their natural size/aspect ratio
+           instead of being cropped into fixed boxes. Column count adjusts
+           per screen size below. */
+        .gallery-masonry {
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        @media (max-width: 991px) {
+            .gallery-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .gallery-masonry {
+                column-count: 1;
+            }
+        }
+
+        .gallery-col {
+            display: inline-block;
+            width: 100%;
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: #fff;
+            font-size: 1.6rem;
+        }
+
+        .gallery-filter .btn {
+            margin: 0 6px 12px;
+            border-radius: 50px;
+            padding: 8px 22px;
+        }
+
+        #gallery-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        #gallery-lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 8px;
+        }
+
+        #gallery-lightbox .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt me-2"></i>11935 Pine Valley Drive
+Woodbridge, ON
+L3l 0C1</small>
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="text-white-50 ms-3" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand d-flex align-items-center ms-4 ms-lg-0">
+                <img src="./img/emblem colour.jpg" alt="Carmel Logo" class="navbar-logo">
+                <div class="ms-3">
+                    <h5 class="school-name mb-0">Sisters of Our Lady</h5>
+                    <small class="school-subtitle">of Mount Carmel</small>
+                </div>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link">Service</a>
+                    <a href="causes.html" class="nav-item nav-link">Activities</a>
+                    <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+                    <a href="testimonial.html" class="nav-item nav-link">Testimonial</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
+                        Donate Now
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <h1 class="display-4 text-white animated slideInDown mb-4">Gallery</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Gallery Intro Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Gallery</div>
+                <h1 class="display-6 mb-3">Moments From Our Program</h1>
+                <p class="text-muted mb-0">A look at daily life at Mount Carmel Adult Day Program — activities, celebrations, and time spent together as a community.</p>
+            </div>
+
+            <!-- Filter buttons (generated automatically from the categories used below) -->
+            <div class="text-center gallery-filter mb-4 wow fadeInUp" data-wow-delay="0.2s" id="gallery-filter">
+            </div>
+
+            <!-- Gallery grid (populated automatically from the GALLERY_PHOTOS list below) -->
+            <div class="gallery-masonry" id="gallery-grid">
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Intro End -->
+
+    <!-- Lightbox -->
+    <div id="gallery-lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Preview">
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer text-light mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <img src="img/emblem colour.jpg" alt="Mount Carmel Logo" width="75" class="mb-3">
+                    <h4 class="text-white mb-3">Mount Carmel Adult Day Program</h4>
+                    <p>Operated by the Congregation of Carmelite Sisters Institute of Our Lady of Carmel, providing compassionate care, engaging activities, and meaningful support for seniors in our community.</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-2" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-square me-2" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square" href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="program.html">Our Program</a>
+                    <a class="btn btn-link" href="gallery.html">Gallery</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Contact Information</h5>
+                    <p><i class="fa fa-map-marker-alt me-3 text-primary"></i>11935 Pine Valley Drive,<br>Woodbridge, ON L3L 0C1</p>
+                    <p><i class="fa fa-phone-alt me-3 text-primary"></i>(905) XXX-XXXX</p>
+                    <p><i class="fa fa-envelope me-3 text-primary"></i>info@mountcarmeladultday.ca</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Office Hours</h5>
+                    <p><strong>Monday - Friday</strong><br>8:30 AM – 4:30 PM</p>
+                    <p>Compassion • Dignity • Respect • Community</p>
+                    <a href="contact.html" class="btn btn-primary mt-2 px-4">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        © 2026 <strong>Mount Carmel Adult Day Program</strong>. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed & Developed by <strong>SEBD Innovate</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Gallery page script -->
+    <script>
+        /* ==========================================================================
+           HOW TO ADD A NEW PHOTO
+           Just add a new line below in this format:
+
+               { src: "img/your-file.jpg", alt: "Short description", category: "activities" },
+
+           - src: the image path (put the actual file in your img/ folder first)
+           - alt: short text description (used for accessibility, not shown on page)
+           - category: one of "activities", "events", "community" — or type a brand
+             new word here (e.g. "outings") and a filter button for it will be
+             created automatically. Every photo also always shows under "All"
+             with no extra step needed.
+           ========================================================================== */
+        const GALLERY_PHOTOS = [
+             { src: "img/conv2.jpg", alt: "Gallery photo", category: "activities" },
+              { src: "img/conv3.jpg", alt: "Gallery photo", category: "activities" },
+               { src: "img/conv2.jpg", alt: "Gallery photo", category: "activities" },
+              { src: "img/conv3.jpg", alt: "Gallery photo", category: "activities" },
+            { src: "img/conv3.jpg", alt: "Gallery photo", category: "activities" },
+            { src: "img/conv3.jpg", alt: "Gallery photo", category: "community" },
+            { src: "img/carousel-2.jpg", alt: "Gallery photo", category: "events" },
+            { src: "img/bg1.jpg", alt: "Gallery photo", category: "activities" },
+            { src: "img/conv2.jpg", alt: "Gallery photo", category: "community" },
+            { src: "img/conv2.jpg", alt: "Gallery photo", category: "events" },
+            { src: "img/conv2.jpg", alt: "Gallery photo", category: "events" },
+            { src: "img/bg1.jpg", alt: "Gallery photo", category: "events" },
+                 { src: "img/bg1.jpg", alt: "Gallery photo", category: "events" },
+                      { src: "img/bg1.jpg", alt: "Gallery photo", category: "events" },
+                           { src: "img/bg1.jpg", alt: "Gallery photo", category: "events" },
+        ];
+
+        (function () {
+            const grid = document.getElementById('gallery-grid');
+            const filterBar = document.getElementById('gallery-filter');
+
+            // ---- Build the photo grid from GALLERY_PHOTOS ----
+            grid.innerHTML = GALLERY_PHOTOS.map(photo => `
+                <div class="gallery-col" data-category="${photo.category}">
+                    <div class="gallery-item">
+                        <img src="${photo.src}" alt="${photo.alt}">
+                        <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </div>
+            `).join('');
+
+            // ---- Build the filter buttons from whatever categories are actually used ----
+            const categories = [...new Set(GALLERY_PHOTOS.map(p => p.category))];
+            const label = (c) => c.charAt(0).toUpperCase() + c.slice(1);
+
+            filterBar.innerHTML =
+                `<button class="btn btn-primary active" data-filter="all">All</button>` +
+                categories.map(c => `<button class="btn btn-outline-primary" data-filter="${c}">${label(c)}</button>`).join('');
+
+            // ---- Filter ----
+            const filterBtns = filterBar.querySelectorAll('.btn');
+            const galleryCols = grid.querySelectorAll('.gallery-col');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => { b.classList.remove('btn-primary', 'active'); b.classList.add('btn-outline-primary'); });
+                    btn.classList.remove('btn-outline-primary');
+                    btn.classList.add('btn-primary', 'active');
+
+                    const filter = btn.getAttribute('data-filter');
+                    galleryCols.forEach(col => {
+                        const match = filter === 'all' || col.getAttribute('data-category') === filter;
+                        col.style.display = match ? '' : 'none';
+                    });
+                });
+            });
+
+            // ---- Lightbox ----
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+            document.addEventListener('click', (e) => {
+                const item = e.target.closest('.gallery-item');
+                if (item) {
+                    const img = item.querySelector('img');
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = 'flex';
+                }
+            });
+
+            function closeLightbox() { lightbox.style.display = 'none'; lightboxImg.src = ''; }
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+        })();
+    </script>
+</body>
+
+</html>
